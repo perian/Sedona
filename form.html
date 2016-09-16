@@ -1,0 +1,106 @@
+dtn<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav hidden">
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">Главная</li>
+          <li class="main-nav__list-item">Фото и видео</li>
+          <li class="main-nav__list-item">Форма отзыва</li>
+          <li class="main-nav__list-item">HTML Academy</li>
+        </ul>
+        <button class="main-nav__toggle" type="button"></button>
+      </nav>
+      <div class="page-header__logo">
+        <img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona logo">
+      </div>
+      <nav class="page-top-menu"></nav>
+    </header>
+    <section class="intro">
+      <div class="intro__background">
+        <div class="intro__wrapper">
+          <h1 class="intro__header">
+            <img src="http://placehold.it/458x78" alt="Welcome ot the gorgeous Sedona">
+          </h1>
+        </div>
+      </div>
+    </section>
+    <main class="main">
+      <div class="main__wrapper">
+        <section class="leave-response">
+          <div class="leave-response__header">
+            <h2 class="leave-response__title">Оставьте свой отзыв</h2>
+            <p class="leave-response__description">
+              Помогите нашим отелям стать лучше!
+              Оставьте отзыв о них, а также о посещенных вами
+              достопримечательностях
+            </p>
+          </div>
+        </section>
+        <form class="form" action="" method="post">
+          <div class="form-introduction">
+            <h2 class="form-intoduction__title">Представтесь, пожалуйста:</h2>
+            <label class="form-intoduction__label" for="name">Имя</label>
+            <input class="form-intoduction__input" type="text" id="name" name="Name" placeholder="Петр" required>
+            <label class="form-intoduction__label" for="surname">Фамилия</label>
+            <input class="form-intoduction__input" type="text" id="surname" name="Surname" placeholder="Иванов" required>
+            <label class="form-intoduction__label" for="patronymic">Отчество</label>
+            <input class="form-intoduction__input" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
+          </div>
+          <div class="form-contacts">
+            <h2 class="form-contacts__title">Контактная информация</h2>
+            <label class="form-contacts__label" for="phone">Контактный телефон:</label>
+            <input class="form-contacts__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+            <label class="form-contacts__label" for="email">Электронная почта:</label>
+            <input class="form-contacts__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
+          </div>
+          <div class="form-impression">
+            <div class="h3 form-impression__title">Ваше общее впечатление:</div>
+            <input class="form-impression__input" type="radio" name="impression" value="positive" id="positive" checked>
+            <label class="form-impression__label" for="positive">Скорее положительное</label>
+            <input class="form-impression__input" type="radio" name="impression" value="negative" id="negative">
+            <label class="form-impression__label" for="negative">Скорее отрицательное</label>
+            <input class="form-impression__input" type="radio" name="impression" value="hard to say" id="hard to say">
+            <label class="form-impression__label" for="hard to say">Затрудняюсь ответить</label>
+          </div>
+          <div class="form-places">
+            <div class="h3 form-places__title">Ваше общее впечатление:</div>
+            <input class="form-places__input" type="checkbox" name="Devil's bridge" id="devil's bridge" checked>
+            <label class="form-places__label" for="devil's bridge">Скорее положительное</label>
+            <input class="form-places__input" type="checkbox" name="Park" id="park" checked>
+            <label class="form-places__label" for="park">Скорее отрицательное</label>
+            <input class="form-places__input" type="checkbox" name="Mountain" id="mountain">
+            <label class="form-places__label" for="mountain">Затрудняюсь ответить</label>
+            <input class="form-places__input" type="checkbox" name="Rocks" id="rocks" checked>
+            <label class="form-places__label" for="rocks">Затрудняюсь ответить</label>
+          </div>
+          <div class="form__emotions">
+            <h3 class="form__emotions-title">Опишите свои эмоции:</h3>
+            <textarea class="form__emotions-textarea" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+            <input class="form__send-response" type="submit" value="Отправить отызыв">
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <h2 class="page-footer__title">#Visitsedona</h2>
+        <div class="page-footer__social">
+          <div class="social">
+            <div class="social-link social-link--twitter"></div>
+            <div class="social-link social-link--facebook"></div>
+            <div class="social-link social-link--youtube"></div>
+          </div>
+        </div>
+        <p class="page-footer__made-by">
+          <p class="page-footer__text">Разработано</p>
+          <span class="page-footer__htmlacademy-icon"></span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
