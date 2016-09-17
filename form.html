@@ -1,4 +1,4 @@
-dtn<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -8,10 +8,10 @@ dtn<!DOCTYPE html>
     <header class="page-header">
       <nav class="main-nav hidden">
         <ul class="main-nav__list">
-          <li class="main-nav__list-item">Главная</li>
-          <li class="main-nav__list-item">Фото и видео</li>
-          <li class="main-nav__list-item">Форма отзыва</li>
-          <li class="main-nav__list-item">HTML Academy</li>
+          <li class="main-nav__list-item"><a href="#">Главная</a></li>
+          <li class="main-nav__list-item"><a href="#">Фото и видео</a></li>
+          <li class="main-nav__list-item"><a href="#">Форма отзыва</a></li>
+          <li class="main-nav__list-item"><a href="#">HTML Academy</a></li>
         </ul>
         <button class="main-nav__toggle" type="button"></button>
       </nav>
@@ -42,45 +42,45 @@ dtn<!DOCTYPE html>
           </div>
         </section>
         <form class="form" action="" method="post">
-          <div class="form-introduction">
-            <h2 class="form-intoduction__title">Представтесь, пожалуйста:</h2>
-            <label class="form-intoduction__label" for="name">Имя</label>
-            <input class="form-intoduction__input" type="text" id="name" name="Name" placeholder="Петр" required>
-            <label class="form-intoduction__label" for="surname">Фамилия</label>
-            <input class="form-intoduction__input" type="text" id="surname" name="Surname" placeholder="Иванов" required>
-            <label class="form-intoduction__label" for="patronymic">Отчество</label>
-            <input class="form-intoduction__input" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
+          <div class="form-user">
+            <h3 class="form__title">Представтесь, пожалуйста:</h3>
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input-name" type="text" id="name" name="Name" placeholder="Петр" required>
+            <label class="form__label" for="surname">Фамилия</label>
+            <input class="form__input-surname" type="text" id="surname" name="Surname" placeholder="Иванов" required>
+            <label class="form__label" for="patronymic">Отчество</label>
+            <input class="form__input-patronymic" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
           </div>
           <div class="form-contacts">
-            <h2 class="form-contacts__title">Контактная информация</h2>
-            <label class="form-contacts__label" for="phone">Контактный телефон:</label>
-            <input class="form-contacts__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
-            <label class="form-contacts__label" for="email">Электронная почта:</label>
-            <input class="form-contacts__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
+            <h3 class="form__title">Контактная информация</h3>
+            <label class="form__label" for="phone">Контактный телефон:</label>
+            <input class="form__input-phone" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+            <label class="form__label" for="email">Электронная почта:</label>
+            <input class="form__input-email" type="email" id="email" name="Email" placeholder="Введите e-mail">
           </div>
           <div class="form-impression">
-            <div class="h3 form-impression__title">Ваше общее впечатление:</div>
-            <input class="form-impression__input" type="radio" name="impression" value="positive" id="positive" checked>
-            <label class="form-impression__label" for="positive">Скорее положительное</label>
-            <input class="form-impression__input" type="radio" name="impression" value="negative" id="negative">
-            <label class="form-impression__label" for="negative">Скорее отрицательное</label>
-            <input class="form-impression__input" type="radio" name="impression" value="hard to say" id="hard to say">
-            <label class="form-impression__label" for="hard to say">Затрудняюсь ответить</label>
+            <h3 class="form__title">Ваше общее впечатление:</h3>
+            <input class="form__input-radio" type="radio" name="impression" value="positive" id="positive" checked>
+            <label class="form__label" for="positive">Скорее положительное</label>
+            <input class="form__input-radio" type="radio" name="impression" value="negative" id="negative">
+            <label class="form__label" for="negative">Скорее отрицательное</label>
+            <input class="form__input-radio" type="radio" name="impression" value="hard to say" id="hard to say">
+            <label class="form__label" for="hard to say">Затрудняюсь ответить</label>
           </div>
           <div class="form-places">
-            <div class="h3 form-places__title">Ваше общее впечатление:</div>
-            <input class="form-places__input" type="checkbox" name="Devil's bridge" id="devil's bridge" checked>
-            <label class="form-places__label" for="devil's bridge">Скорее положительное</label>
-            <input class="form-places__input" type="checkbox" name="Park" id="park" checked>
-            <label class="form-places__label" for="park">Скорее отрицательное</label>
-            <input class="form-places__input" type="checkbox" name="Mountain" id="mountain">
-            <label class="form-places__label" for="mountain">Затрудняюсь ответить</label>
-            <input class="form-places__input" type="checkbox" name="Rocks" id="rocks" checked>
-            <label class="form-places__label" for="rocks">Затрудняюсь ответить</label>
+            <h3 class="form__title">Ваше общее впечатление:</h3>
+            <input class="form__input-checkbox" type="checkbox" name="Devil's bridge" id="devil's bridge" checked>
+            <label class="form__label" for="devil's bridge">Скорее положительное</label>
+            <input class="form__input-checkbox" type="checkbox" name="Park" id="park" checked>
+            <label class="form__label" for="park">Скорее отрицательное</label>
+            <input class="form__input-checkbox" type="checkbox" name="Mountain" id="mountain">
+            <label class="form__label" for="mountain">Затрудняюсь ответить</label>
+            <input class="form__input-checkbox" type="checkbox" name="Rocks" id="rocks" checked>
+            <label class="form__label" for="rocks">Затрудняюсь ответить</label>
           </div>
           <div class="form__emotions">
-            <h3 class="form__emotions-title">Опишите свои эмоции:</h3>
-            <textarea class="form__emotions-textarea" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
+            <h3 class="form__title">Опишите свои эмоции:</h3>
+            <textarea class="form__textarea" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             <input class="form__send-response" type="submit" value="Отправить отызыв">
           </div>
         </form>
