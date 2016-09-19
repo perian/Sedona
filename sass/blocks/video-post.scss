@@ -1,0 +1,17 @@
+.video-post {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  color: $black-light;
+  text-transform: uppercase;
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: $black;
+  }
+
+  &__text {
+  }
+}

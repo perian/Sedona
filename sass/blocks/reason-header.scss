@@ -1,0 +1,9 @@
+.reason-header {
+  color: $white;
+  background-color: $blue;
+
+  &--dark {
+    color: $black-light;
+    background-color: $grey;
+  }
+}

@@ -1,0 +1,21 @@
+.intro {
+  line-height: 26px;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  color: $black;
+  text-transform: uppercase;
+
+  &__background {
+    background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    color: $black-light;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $grey;
+  }
+}
