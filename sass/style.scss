@@ -29,5 +29,7 @@
 @import "blocks/wrapper.scss";
 
 body {
+  margin: 0 auto;
+  width: 320px;
   background: $white;
 }

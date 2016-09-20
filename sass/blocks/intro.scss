@@ -1,8 +1,12 @@
 .intro {
+  margin-bottom: 30px;
+
   line-height: 26px;
   font-family: "PT Sans", "Tahoma", sans-serif;
-  color: $black;
+  text-align: center;
+  color: $black-light;
   text-transform: uppercase;
+  text-align: center;
 
   &__background {
     background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
@@ -11,11 +15,9 @@
   &__title {
     font-weight: bold;
     font-size: 18px;
-    color: $black-light;
   }
 
   &__text {
     font-size: 14px;
-    color: $grey;
   }
 }
