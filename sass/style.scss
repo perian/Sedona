@@ -1,0 +1,35 @@
+@import "normalize.scss";
+
+@import "mixins.scss";
+@import "variables.scss";
+
+@import "global/fonts.scss";
+@import "global/form.scss";
+@import "global/form-user.scss";
+@import "global/form-places.scss";
+@import "global/form-contacts.scss";
+@import "global/form-impression.scss";
+
+@import "blocks/btn.scss";
+@import "blocks/hidden.scss";
+@import "blocks/intro.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-top-menu.scss";
+@import "blocks/photo-and-video.scss";
+@import "blocks/photo-post.scss";
+@import "blocks/reason-header.scss";
+@import "blocks/reason.scss";
+@import "blocks/search-hotel.scss";
+@import "blocks/social-link.scss";
+@import "blocks/social.scss";
+@import "blocks/video-post.scss";
+@import "blocks/wrapper.scss";
+
+body {
+  margin: 0 auto;
+  width: 320px;
+  background: $white;
+}

@@ -1,0 +1,60 @@
+.form {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+
+  &__user,
+  &__contacts,
+  &__impression,
+  &__places,
+  &__emotions {
+    padding-bottom: 25px;
+
+    border-top: 1px solid $grey-dark;
+  }
+
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    &--grey {
+      font-size: 14px;
+      color: $black-light;
+      text-transform: uppercase;
+    }
+  }
+
+  &__input {
+    &::-webkit-input-placeholder {
+      color: $black-light;
+    }
+
+    &::-moz-placeholder {
+      color: $black-light;
+    }
+
+    &::-ms-input-placeholder {
+      color: $black-light;
+    }
+  }
+
+  &__textarea {
+    background: $grey;
+
+    &::-webkit-input-placeholder {
+      color: $black-light;
+    }
+
+    &::-moz-placeholder {
+      color: $black-light;
+    }
+
+    &::-ms-input-placeholder {
+      color: $black-light;
+    }
+  }
+}

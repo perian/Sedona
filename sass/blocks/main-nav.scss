@@ -1,0 +1,25 @@
+.main-nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list-item {
+    padding: 7.5px 0;
+
+    text-align: center;
+
+    background-color: $blue;
+    border-top: 1px solid $blue-light;
+    border-bottom: 1px solid $blue-dark;
+  }
+
+  & a {
+    font-size: 18px;
+    line-height: 40px;
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,15 @@
+.reason-header {
+  padding: 15px 0;
+
+  text-align: center;
+  color: $white;
+
+  background-color: $blue;
+  border-bottom: 1px solid $grey-dark;
+
+  &--dark {
+    color: $black-light;
+
+    background-color: $grey;
+  }
+}

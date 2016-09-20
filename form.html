@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav hidden">
+      <nav class="main-nav  hidden">
         <ul class="main-nav__list">
           <li class="main-nav__list-item"><a href="#">Главная</a></li>
           <li class="main-nav__list-item"><a href="#">Фото и видео</a></li>
@@ -18,82 +19,102 @@
       <div class="page-header__logo">
         <img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona logo">
       </div>
-      <nav class="page-top-menu"></nav>
+      <div class="page-top-menu"></div>
     </header>
     <section class="intro">
-      <div class="intro__background">
-        <div class="intro__wrapper">
+      <div class="wrapper">
+        <div class="intro__background">
           <h1 class="intro__header">
             <img src="http://placehold.it/458x78" alt="Welcome ot the gorgeous Sedona">
           </h1>
         </div>
+        <div class="intro__description">
+          <h2 class="intro__title">
+            Оставьте свой отзыв
+          </h2>
+          <p class="intro__text">
+            Помогите нашим отелям стать лучше!
+            Оставьте отзыв о них, а также о посещенных вами
+            достопримечательностях
+          </p>
+        </div>
       </div>
     </section>
     <main class="main">
-      <div class="main__wrapper">
-        <section class="leave-response">
-          <div class="leave-response__header">
-            <h2 class="leave-response__title">Оставьте свой отзыв</h2>
-            <p class="leave-response__description">
-              Помогите нашим отелям стать лучше!
-              Оставьте отзыв о них, а также о посещенных вами
-              достопримечательностях
-            </p>
-          </div>
-        </section>
+      <div class="wrapper">
         <form class="form" action="" method="post">
-          <div class="form-user">
+          <div class="form__user">
             <h3 class="form__title">Представтесь, пожалуйста:</h3>
-            <label class="form__label" for="name">Имя</label>
-            <input class="form__input-name" type="text" id="name" name="Name" placeholder="Петр" required>
-            <label class="form__label" for="surname">Фамилия</label>
-            <input class="form__input-surname" type="text" id="surname" name="Surname" placeholder="Иванов" required>
-            <label class="form__label" for="patronymic">Отчество</label>
-            <input class="form__input-patronymic" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
+            <label class="form__label  form__label--grey" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="Name" placeholder="Петр" required>
+            <label class="form__label  form__label--grey" for="surname">Фамилия</label>
+            <input class="form__input" type="text" id="surname" name="Surname" placeholder="Иванов" required>
+            <label class="form__label  form__label--grey" for="patronymic">Отчество</label>
+            <input class="form__input" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
           </div>
-          <div class="form-contacts">
+          <div class="form__contacts">
             <h3 class="form__title">Контактная информация</h3>
-            <label class="form__label" for="phone">Контактный телефон:</label>
-            <input class="form__input-phone" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
-            <label class="form__label" for="email">Электронная почта:</label>
-            <input class="form__input-email" type="email" id="email" name="Email" placeholder="Введите e-mail">
+            <label class="form__label  form__label--grey" for="phone">Контактный телефон:</label>
+            <input class="form__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+            <label class="form__label  form__label--grey" for="email">Электронная почта:</label>
+            <input class="form__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
           </div>
-          <div class="form-impression">
+          <div class="form__impression">
             <h3 class="form__title">Ваше общее впечатление:</h3>
-            <input class="form__input-radio" type="radio" name="impression" value="positive" id="positive" checked>
+            <input class="form__input  form__input--radio" type="radio" name="impression" value="positive" id="positive" checked>
             <label class="form__label" for="positive">Скорее положительное</label>
-            <input class="form__input-radio" type="radio" name="impression" value="negative" id="negative">
+            <input class="form__input  form__input--radio" type="radio" name="impression" value="negative" id="negative">
             <label class="form__label" for="negative">Скорее отрицательное</label>
-            <input class="form__input-radio" type="radio" name="impression" value="hard to say" id="hard to say">
+            <input class="form__input  form__input--radio" type="radio" name="impression" value="hard to say" id="hard to say">
             <label class="form__label" for="hard to say">Затрудняюсь ответить</label>
           </div>
-          <div class="form-places">
-            <h3 class="form__title">Ваше общее впечатление:</h3>
-            <input class="form__input-checkbox" type="checkbox" name="Devil's bridge" id="devil's bridge" checked>
-            <label class="form__label" for="devil's bridge">Скорее положительное</label>
-            <input class="form__input-checkbox" type="checkbox" name="Park" id="park" checked>
-            <label class="form__label" for="park">Скорее отрицательное</label>
-            <input class="form__input-checkbox" type="checkbox" name="Mountain" id="mountain">
-            <label class="form__label" for="mountain">Затрудняюсь ответить</label>
-            <input class="form__input-checkbox" type="checkbox" name="Rocks" id="rocks" checked>
-            <label class="form__label" for="rocks">Затрудняюсь ответить</label>
+          <div class="form__places">
+            <h3 class="form__title">Посещенные достопримечательности:</h3>
+            <input class="form__input  form__input--checkbox" type="checkbox" name="Devil's bridge" id="devil's bridge" checked>
+            <label class="form__label" for="devil's bridge">Мост Дьявола</label>
+            <input class="form__input  form__input--checkbox" type="checkbox" name="Park" id="park" checked>
+            <label class="form__label" for="park">Слайд-парк</label>
+            <input class="form__input  form__input--checkbox" type="checkbox" name="Mountain" id="mountain">
+            <label class="form__label" for="mountain">Гора-Колокол</label>
+            <input class="form__input  form__input--checkbox" type="checkbox" name="Rocks" id="rocks" checked>
+            <label class="form__label" for="rocks">Красные скалы</label>
           </div>
           <div class="form__emotions">
             <h3 class="form__title">Опишите свои эмоции:</h3>
             <textarea class="form__textarea" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
-            <input class="form__send-response" type="submit" value="Отправить отызыв">
+            <input class="form__send-response btn" type="submit" value="Отправить отзыв">
+          </div>
+          <div class="failure-pop-up  hidden">
+            <div class="wrapper">
+              <h3 class="form__title">Что-то пошло не так!</h3>
+              <p class="form__text">
+                Проверьте поля, выделенные красным,
+                скорее всего вы забыли их заполнить
+              </p>
+              <input class="btn" type="button" value="Oк">
+            </div>
+          </div>
+          <div class="success-pop-up  hidden">
+            <div class="wrapper">
+              <h3 class="form__title">Ваш отзыв отправлен!</h3>
+              <p class="form__text">
+                Проверьте поля, выделенные красным,
+                скорее всего вы забыли их заполнить
+              </p>
+              <input class="btn" type="button" value="Закрыть окно">
+            </div>
           </div>
         </form>
       </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="wrapper">
         <h2 class="page-footer__title">#Visitsedona</h2>
         <div class="page-footer__social">
           <div class="social">
-            <div class="social-link social-link--twitter"></div>
-            <div class="social-link social-link--facebook"></div>
-            <div class="social-link social-link--youtube"></div>
+            <div class="social-link  social-link--twitter"></div>
+            <div class="social-link  social-link--facebook"></div>
+            <div class="social-link  social-link--youtube"></div>
           </div>
         </div>
         <p class="page-footer__made-by">

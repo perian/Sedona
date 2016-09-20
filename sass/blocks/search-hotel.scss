@@ -1,0 +1,14 @@
+.search-hotel {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans", "Tahoma", sans-serif;
+  color: $black-light;
+  text-transform: uppercase;
+  text-align: center;
+
+  &__title {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
