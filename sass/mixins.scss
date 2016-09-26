@@ -1,3 +1,28 @@
+@mixin tablet {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 648px;
+  }
+
+  @include desktop {
+    width: 800px;
+  }
+}
+
 @mixin clearfix() {
   &::after {
     content: "";

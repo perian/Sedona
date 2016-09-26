@@ -1,7 +1,12 @@
 .main-nav {
+  width: 320px;
+  margin: 0 auto;
+
   &__list {
     margin: 0;
     padding: 0;
+
+    list-style: none;
   }
 
   &__list-item {
@@ -14,6 +19,14 @@
     border-bottom: 1px solid $blue-dark;
   }
 
+  &__list-item:first-child {
+    border-top: none;
+  }
+
+  &__list-item:last-child {
+    border-bottom: none;
+  }
+
   & a {
     font-size: 18px;
     line-height: 40px;
@@ -21,5 +34,35 @@
     color: $white;
     text-transform: uppercase;
     text-decoration: none;
+  }
+}
+
+@include tablet {
+  .main-nav {
+    width: auto;
+    min-height: 56px;
+    margin: 0;
+
+    @include clearfix;
+
+    &__list-item {
+      float: left;
+      width: 20%;
+
+      background: none;
+      border: none;
+    }
+
+    &__list-item:nth-child(3),
+    &__list-item:nth-child(4) {
+      float: right;
+    }
+  }
+}
+
+@include desktop {
+  .main-nav {
+    width: auto;
+    margin: 0;
   }
 }
