@@ -1,15 +1,33 @@
 .intro {
+  margin: 0 auto;
   margin-bottom: 30px;
 
   line-height: 26px;
   font-family: "PT Sans", "Tahoma", sans-serif;
   text-align: center;
+  text-align: center;
   color: $black-light;
   text-transform: uppercase;
-  text-align: center;
+
+  &__wrapper {
+    @include container;
+  }
 
   &__background {
+    min-height: 390px;
+    width: 100%;
+
     background: url("/img/bg-back-mobile@1x.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include tablet {
+      min-height: 518px;
+    }
+  }
+
+  &__header {
+    margin: 0;
   }
 
   &__title {

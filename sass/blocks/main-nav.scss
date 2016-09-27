@@ -1,13 +1,12 @@
 .main-nav {
   position: relative;
+  min-height: 56px;
 
-  width: 320px;
   margin: 0 auto;
 
   @include tablet {
     width: auto;
     min-height: 56px;
-    margin: 0;
 
     @include clearfix;
   }
