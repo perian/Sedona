@@ -17,10 +17,12 @@
 
   @include tablet {
     width: 648px;
+    padding: 0;
   }
 
   @include desktop {
     width: 800px;
+    padding: 0;
   }
 }
 

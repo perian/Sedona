@@ -8,13 +8,21 @@
   <body>
     <header class="page-header">
       <nav class="main-nav  hidden">
-        <ul class="main-nav__list">
-          <li class="main-nav__list-item"><a href="#">Главная</a></li>
-          <li class="main-nav__list-item"><a href="#">Фото и видео</a></li>
-          <li class="main-nav__list-item"><a href="#">Форма отзыва</a></li>
-          <li class="main-nav__list-item"><a href="#">HTML Academy</a></li>
-        </ul>
         <button class="main-nav__toggle" type="button"></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__list-item">
+            <a href="/index.html">Главная</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="/photo.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="/form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__list-item">
+            <a href="htmlacademy.ru">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
       <div class="page-header__logo">
         <img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona logo">
@@ -22,13 +30,15 @@
       <div class="page-top-menu"></div>
     </header>
     <section class="intro">
-      <div class="wrapper">
-        <div class="intro__background">
+      <div class="intro__background">
+        <div class="intro__wrapper">
           <h1 class="intro__header">
-            <img src="http://placehold.it/458x78" alt="Welcome ot the gorgeous Sedona">
+            <img src="http://placehold.it/458x78" widht="458" height="78px" alt="Welcome ot the gorgeous Sedona">
           </h1>
         </div>
-        <div class="intro__description">
+      </div>
+      <div class="intro__description">
+        <div class="intro__wrapper">
           <h2 class="intro__title">
             Оставьте свой отзыв
           </h2>
@@ -108,8 +118,8 @@
       </div>
     </main>
     <footer class="page-footer">
-      <div class="wrapper">
-        <h2 class="page-footer__title">#Visitsedona</h2>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__site-link" href="#">#Visitsedona</a>
         <div class="page-footer__social">
           <div class="social">
             <div class="social-link  social-link--twitter"></div>
@@ -117,10 +127,10 @@
             <div class="social-link  social-link--youtube"></div>
           </div>
         </div>
-        <p class="page-footer__made-by">
+        <div class="page-footer__made-by">
           <p class="page-footer__text">Разработано</p>
           <span class="page-footer__htmlacademy-icon"></span>
-        </p>
+        </div>
       </div>
     </footer>
   </body>

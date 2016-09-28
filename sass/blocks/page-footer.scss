@@ -1,14 +1,72 @@
 .page-footer {
-  padding: 20px 0;
+  min-height: 245px;
+  padding-top: 35px;
 
   line-height: 26px;
   font-family: "PT Sans", "Tahoma", sans-serif;
   text-align: center;
   text-transform: uppercase;
 
-  &__title {
+  @include tablet {
+    display: table;
+    width: 100%;
+    min-height: 120px;
+  }
+
+  &__wrapper {
+    @include container;
+
+    @include desktop {
+      width: 1200px;
+    }
+  }
+
+  &__site-link {
+    display: block;
+    margin-bottom: 36px;
+
     font-weight: bold;
     font-size: 21px;
+    color: $black;
+    text-decoration: none;
+
+    @include tablet {
+      display: table-cell;
+      width: 216px;
+
+      vertical-align: middle;
+      text-align: left;
+    }
+    @include desktop {
+      width: 400px;
+    }
+  }
+
+  &__social {
+    margin-bottom: 36px;
+
+    @include tablet {
+      display: table-cell;
+      width: 216px;
+
+      vertical-align: middle;
+    }
+    @include desktop {
+      width: 400px;
+    }
+  }
+
+  &__made-by {
+    @include tablet {
+      display: table-cell;
+      width: 216px;
+
+      vertical-align: middle;
+      text-align: right;
+    }
+    @include desktop {
+      width: 400px;
+    }
   }
 
   &__text {

@@ -1,14 +1,29 @@
 .search-hotel {
+  min-height: 265px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+
   font-size: 14px;
   line-height: 24px;
   font-family: "PT Sans", "Tahoma", sans-serif;
+  text-align: center;
   color: $black-light;
   text-transform: uppercase;
-  text-align: center;
+
+  &__wrapper {
+    @include container;
+  }
 
   &__title {
+    margin: 0;
+    margin-bottom: 28px;
+
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
+  }
+
+  &__text {
+    margin-bottom: 36px;
   }
 }
