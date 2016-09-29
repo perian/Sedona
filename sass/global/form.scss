@@ -4,20 +4,45 @@
   line-height: 26px;
   font-family: "PT Sans", "Tahoma", sans-serif;
 
+  @include container;
+  @include tablet {
+    position: relative;
+
+    padding-top: 180px;
+  }
+
   &__user,
   &__contacts,
   &__impression,
   &__places,
   &__emotions {
+    padding-top: 22px;
     padding-bottom: 25px;
 
     border-top: 1px solid $grey-dark;
   }
 
   &__title {
-    font-size: 18px;
+    margin: 0;
+    margin-bottom: 25px;
+
+    font-size: 21px;
     text-align: center;
     text-transform: uppercase;
+
+    @include tablet {
+      & .hidden {
+        display: none;
+      }
+    }
+  }
+
+  & ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    @include clearfix
   }
 
   &__label {
@@ -43,7 +68,14 @@
   }
 
   &__textarea {
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 20px;
+
     background: $grey;
+    border: none;
+
+    resize: none;
 
     &::-webkit-input-placeholder {
       color: $black-light;
@@ -55,6 +87,103 @@
 
     &::-ms-input-placeholder {
       color: $black-light;
+    }
+  }
+
+  &__user {
+    @include tablet {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 324px;
+      padding-left: 50px;
+    }
+  }
+
+  &__contacts {
+    @include tablet {
+      margin-top: 65px;
+      .form__title {
+        margin-top: -35px;
+      }
+
+      .form__input {
+        width: 100%;
+      }
+    }
+    @include desktop {
+      & ul {
+        @include clearfix
+      }
+
+      & li {
+        @include clearfix
+        float: left;
+        width: 50%;
+      }
+
+      & li:last-child {
+        float: right;
+      }
+
+      .form__label {
+        float: left;
+        margin-right: 23px;
+      }
+
+      .form__input {
+        float: left;
+        width: 315px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+  }
+
+  &__impression {
+    @include tablet {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 324px;
+      padding-right: 50px;
+    }
+  }
+
+  &__places {
+    @include tablet {
+      .form__title {
+        margin-top: -35px;
+      }
+
+      @include desktop {
+        & li {
+          float: left;
+          width: 240px;
+        }
+      }
+    }
+  }
+
+  &__emotions {
+    text-align: center;
+
+    .hidden {
+      display: none;
+    }
+
+    @include tablet {
+      .form__title {
+        margin-top: -35px;
+      }
+      .hidden {
+        display: inline-block;
+        margin: 0;
+      }
     }
   }
 }

@@ -11,6 +11,7 @@
 @import "global/form-impression.scss";
 
 @import "blocks/btn.scss";
+@import "blocks/pop-up.scss";
 @import "blocks/hidden.scss";
 @import "blocks/intro.scss";
 @import "blocks/main-nav.scss";
@@ -27,19 +28,21 @@
 @import "blocks/video-post.scss";
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body {
   min-width: 320px;
 
   background: $white;
+
   @include tablet {
     background: #4dba64;
-  };
+  }
+
   @include desktop {
     background: #6b7ec2;
-  };
+  }
 }
 
 img {

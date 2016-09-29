@@ -11,18 +11,15 @@
 }
 
 @mixin container {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
-  padding: 0 20px;
 
   @include tablet {
     width: 648px;
-    padding: 0;
   }
 
   @include desktop {
-    width: 800px;
-    padding: 0;
+    width: 960px;
   }
 }
 
