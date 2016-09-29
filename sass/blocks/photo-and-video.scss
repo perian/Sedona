@@ -1,0 +1,10 @@
+.photo-and-video {
+  @include container;
+
+  @include tablet {
+    font-size: 0;
+  }
+  @include desktop {
+    width: 1200px;
+  }
+}

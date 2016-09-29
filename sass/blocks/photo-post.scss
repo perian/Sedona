@@ -9,11 +9,87 @@
 
   border-top: 1px solid $grey-dark;
 
+  @include tablet {
+    padding: 0;
+
+    border: none;
+
+    &--full-width {
+      width: 100%;
+    }
+
+    &--limit-width {
+      display: inline-block;
+      width: 50%;
+    }
+  }
+
+  @include desktop {
+    position: relative;
+    &--limit-width {
+      display: inline-block;
+      width: 400px;
+
+      vertical-align: top;
+    }
+  }
+
+  & img {
+    display: block;
+    width: 100%;
+    @include tablet {
+      height: 400px;
+    }
+  }
+
+  &__footer {
+    padding: 18px 22px;
+
+    @include tablet {
+      background-color: $grey-bg;
+
+      @include clearfix;
+    }
+
+    @include desktop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 100%;
+
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__info {
+    @include tablet {
+      float: left;
+    }
+  }
+
+  &__likes {
+    @include tablet {
+      float: right;
+    }
+  }
+
   &__title {
+    margin: 0;
+
     text-transform: uppercase;
   }
 
   &__author {
+    margin: 0;
+
     color: $black-light;
+  }
+
+  &__like-button,
+  &__likes-amount {
+    display: inline-block;
+
+    vertical-align: top;
   }
 }
