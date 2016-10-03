@@ -179,6 +179,9 @@
     .form__list {
       display: flex;
       flex-wrap: wrap;
+      @include desktop {
+        flex-wrap: nowrap;
+      }
     }
 
     .form__list-item {
@@ -186,9 +189,15 @@
     }
     .form__list-item:nth-child(2) {
       order: 1;
+      @include desktop {
+        order: 0;
+      }
     }
     .form__list-item:nth-child(4) {
       order: 2;
+      @include desktop {
+        order: 0;
+      }
     }
   }
 
