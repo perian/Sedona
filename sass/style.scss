@@ -1,5 +1,4 @@
 @import "normalize.scss";
-
 @import "mixins.scss";
 @import "variables.scss";
 
@@ -35,7 +34,6 @@ body {
   @include tablet {
     background: #4dba64;
   }
-
   @include desktop {
     background: #6b7ec2;
   }
@@ -44,4 +42,18 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
 }

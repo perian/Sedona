@@ -1,13 +1,5 @@
-.page-header {
-  &__logo {
-    height: 83px;
+.page-header__logo {
+  height: 83px;
 
-    text-align: center;
-
-    @include tablet {
-      position: absolute;
-      top: 0;
-      left: calc(50% - 51px);
-    }
-  }
+  text-align: center;
 }
