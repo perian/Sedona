@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -54,16 +55,16 @@
       <form class="form" action="#" method="post">
         <div class="form__user">
           <h3 class="form__title">Представьтесь<span class="hidden">, пожалуйста</span>:</h3>
-          <ul>
-            <li>
+          <ul class="form__list">
+            <li class="form__list-item">
               <label class="form__label  form__label--grey" for="name">Имя</label>
               <input class="form__input" type="text" id="name" name="Name" placeholder="Петр" required>
             </li>
-            <li>
+            <li class="form__list-item">
               <label class="form__label  form__label--grey" for="surname">Фамилия</label>
               <input class="form__input" type="text" id="surname" name="Surname" placeholder="Иванов" required>
             </li>
-            <li>
+            <li class="form__list-item">
               <label class="form__label  form__label--grey" for="patronymic">Отчество</label>
               <input class="form__input" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
             </li>
@@ -71,12 +72,12 @@
         </div>
         <div class="form__contacts">
           <h3 class="form__title">Контактная информация</h3>
-          <ul>
-            <li>
+          <ul class="form__list">
+            <li class="form__list-item">
               <label class="form__label  form__label--grey" for="phone"><span class="hidden">Контактный</span> телефон:</label>
               <input class="form__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
             </li>
-            <li>
+            <li class="form__list-item">
               <label class="form__label  form__label--grey" for="email">Электронная почта:</label>
               <input class="form__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
             </li>
@@ -84,16 +85,16 @@
         </div>
         <div class="form__impression">
           <h3 class="form__title">Ваше общее впечатление:</h3>
-          <ul>
-            <li>
+          <ul class="form__list">
+            <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="positive" id="positive" checked>
               <label class="form__label" for="positive">Скорее положительное</label>
             </li>
-            <li>
+            <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="negative" id="negative">
               <label class="form__label" for="negative">Скорее отрицательное</label>
             </li>
-            <li>
+            <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="hard to say" id="hard_to_say">
               <label class="form__label" for="hard_to_say">Затрудняюсь ответить</label>
             </li>
@@ -101,20 +102,20 @@
         </div>
         <div class="form__places">
           <h3 class="form__title">Посещенные достопримечательности:</h3>
-          <ul>
-            <li>
+          <ul class="form__list">
+            <li class="form__list-item">
               <input class="form__input  form__input--checkbox" type="checkbox" name="Devil's bridge" id="devil's_bridge" checked>
               <label class="form__label" for="devil's_bridge">Мост Дьявола</label>
             </li>
-            <li>
+            <li class="form__list-item">
               <input class="form__input  form__input--checkbox" type="checkbox" name="Park" id="park" checked>
               <label class="form__label" for="park">Слайд-парк</label>
             </li>
-            <li>
+            <li class="form__list-item">
               <input class="form__input  form__input--checkbox" type="checkbox" name="Mountain" id="mountain">
               <label class="form__label" for="mountain">Гора-Колокол</label>
             </li>
-            <li>
+            <li class="form__list-item">
               <input class="form__input  form__input--checkbox" type="checkbox" name="Rocks" id="rocks" checked>
               <label class="form__label" for="rocks">Красные скалы</label>
             </li>
@@ -153,15 +154,15 @@
         <a class="page-footer__site-link" href="#">#Visitsedona</a>
         <div class="page-footer__social">
           <div class="social">
-            <div class="social-link  social-link--twitter"></div>
-            <div class="social-link  social-link--facebook"></div>
-            <div class="social-link  social-link--youtube"></div>
+            <a class="social-link  social-link--twitter" href="#"></a>
+            <a class="social-link  social-link--facebook" href="#"></a>
+            <a class="social-link  social-link--youtube" href="#"></a>
           </div>
         </div>
-        <div class="page-footer__made-by">
+        <a class="page-footer__made-by" href="htmlacademy.ru">
           <p class="page-footer__text">Разработано</p>
           <span class="page-footer__htmlacademy-icon"></span>
-        </div>
+        </a>
       </div>
     </footer>
   </body>

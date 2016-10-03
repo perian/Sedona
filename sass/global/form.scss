@@ -3,12 +3,15 @@
   font-size: 14px;
   line-height: 26px;
   font-family: "PT Sans", "Tahoma", sans-serif;
-
   @include container;
-  @include tablet {
-    position: relative;
 
-    padding-top: 180px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    & > div {
+      outline: 1px solid red;
+    }
   }
 
   &__user,
@@ -37,12 +40,13 @@
     }
   }
 
-  & ul {
+  &__list {
     margin: 0;
     padding: 0;
 
     list-style: none;
-    @include clearfix
+
+    @include clearfix;
   }
 
   &__label {
@@ -64,6 +68,9 @@
 
     &::-ms-input-placeholder {
       color: $black-light;
+    }
+    @include tablet {
+      flex-grow: 1;
     }
   }
 
@@ -92,35 +99,32 @@
 
   &__user {
     @include tablet {
-      position: absolute;
-      top: 0;
-      right: 0;
-
-      width: 324px;
-      padding-left: 50px;
+      flex-basis: 50%;
+    }
+    & li {
+      @include tablet {
+        display: flex;
+      }
+    }
+    .form__input {
+      flex-grow: 1;
     }
   }
 
   &__contacts {
     @include tablet {
-      margin-top: 65px;
-      .form__title {
-        margin-top: -35px;
-      }
-
-      .form__input {
-        width: 100%;
-      }
+      flex-basis: 100%;
     }
     @include desktop {
       & ul {
-        @include clearfix
+        @include clearfix;
       }
 
       & li {
-        @include clearfix
         float: left;
         width: 50%;
+
+        @include clearfix;
       }
 
       & li:last-child {
@@ -141,31 +145,50 @@
         display: none;
       }
     }
+    .form__title {
+      margin-top: -35px;
+    }
+
+    .form__input {
+      width: 100%;
+    }
   }
 
   &__impression {
     @include tablet {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 324px;
+      flex-basis: 50%;
+      order: -2;
       padding-right: 50px;
     }
   }
 
   &__places {
     @include tablet {
+      flex-basis: 100%;
       .form__title {
         margin-top: -35px;
       }
-
-      @include desktop {
-        & li {
-          float: left;
-          width: 240px;
-        }
+    }
+    @include desktop {
+      & li {
+        float: left;
+        width: 240px;
       }
+    }
+
+    .form__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .form__list-item {
+      flex-basis: 50%;
+    }
+    .form__list-item:nth-child(2) {
+      order: 1;
+    }
+    .form__list-item:nth-child(4) {
+      order: 2;
     }
   }
 
@@ -177,10 +200,12 @@
     }
 
     @include tablet {
+      flex-basis: 100%;
+
       .form__title {
         margin-top: -35px;
       }
-      .hidden {
+      & .hidden {
         display: inline-block;
         margin: 0;
       }
