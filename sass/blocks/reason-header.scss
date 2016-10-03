@@ -5,7 +5,18 @@
   color: $white;
 
   background-color: $blue;
-  border-bottom: 1px solid $grey-dark;
+
+  &--absolute-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @include tablet {
+    float: left;
+    width: 33%;
+    height: 256px;
+  }
 
   &--dark {
     color: $black-light;

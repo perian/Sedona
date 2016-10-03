@@ -1,0 +1,30 @@
+.pop-up {
+  padding: 42px 36px 35px;
+  margin: 0 auto;
+
+  text-align: center;
+  border: none;
+
+  &--failure {
+    @include tablet {
+      width: 400px;
+    }
+  }
+
+  &--success {
+    @include tablet {
+      width: 648px;
+    }
+
+    @include desktop {
+      width: 638px;
+    };
+  }
+
+  &__text {
+    font-weight: normal;
+    line-height: 24px;
+    color: $black-light;
+    text-transform: uppercase;
+  }
+}
