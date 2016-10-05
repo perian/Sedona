@@ -10,20 +10,44 @@
   color: $black-light;
   text-transform: uppercase;
 
-  &__wrapper {
-    @include container;
+  @include tablet {
+    min-height: 320px;
+    padding-top: 55px;
   }
 
-  &__title {
-    margin: 0;
-    margin-bottom: 18px;
+  @include desktop {
+    min-height: 330px;
+  }
+}
 
-    font-weight: bold;
-    font-size: 21px;
-    line-height: 26px;
+.search-hotel__wrapper {
+  @include container;
+}
+
+.search-hotel__title {
+  margin: 0;
+  margin-bottom: 18px;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+
+  @include tablet {
+    font-size: 30px;
+    margin-bottom: 32px;
+  }
+}
+
+.search-hotel__text {
+  margin-bottom: 34px;
+  @include tablet {
+    margin-bottom: 42px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  &__text {
-    margin-bottom: 36px;
+  @include desktop {
+    margin-bottom: 46px;
   }
 }
