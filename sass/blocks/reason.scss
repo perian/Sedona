@@ -19,16 +19,14 @@
   margin: auto;
 
   @include tablet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0;
   }
 }
 
 .reason__header {
-  padding-top: 27px;
+  padding-top: 30px;
   padding-bottom: 40px;
+  min-height: 215px;
 
   text-align: center;
   color: $white;
@@ -37,11 +35,12 @@
 
   @include tablet {
     height: 256px;
-    padding-top: 48px;
+    padding-top: 45px;
   }
 }
 
 .reason__header--dark {
+  min-height: 168px;
   padding-bottom: 0;
 
   color: $black-light;
@@ -84,13 +83,6 @@
   margin: 0;
 
   word-wrap: break-word;
-  @include tablet {
-    width: 165px;
-  }
-
-  @include desktop {
-    width: 230px
-  };
 }
 
 .reason__text .hidden {
@@ -114,7 +106,7 @@
 .reason__img {
   position: relative;
 
-  height: 256px;
+  height: 260px;
 
   @include tablet {
     width: 67%;
@@ -131,8 +123,12 @@
   left: 0;
 
   width: 100%;
-  height: 256px;
+  height: 260px;
   margin: auto;
+
+  @include tablet {
+    height: 256px;
+  }
 }
 
 .reason:nth-child(1),
@@ -192,6 +188,8 @@
 
 .reason:nth-child(2) .reason__wrapper {
   @include tablet {
+    display: flex;
+    flex-direction: column;
     padding-top: 136px;
     padding-left: 0;
   }
@@ -209,6 +207,7 @@
   margin: 0;
   padding-top: 31px;
   padding-bottom: 19px;
+  min-height: 415px;
 
   @include tablet {
     display: flex;
@@ -261,6 +260,7 @@
 }
 
 .reason:nth-child(3) .reason__header {
+  min-height: 190px;
   padding-top: 38px;
 
   @include tablet {
@@ -272,6 +272,8 @@
 .reason:nth-child(3) .reason__title {
   @include tablet {
     width: 151px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

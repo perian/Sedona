@@ -36,9 +36,11 @@
 }
 
 .intro__description {
+  min-height: 215px;
   padding-top: 39px;
   padding-bottom: 20px;
   @include tablet {
+    min-height: 205px;
     padding: 49px 0;
   }
 }
