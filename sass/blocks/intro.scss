@@ -10,7 +10,11 @@
 }
 
 .intro__wrapper {
-  @include container;
+  width: 275px;
+  margin: 0 auto;
+  @include tablet {
+    width: 550px;
+  }
 }
 
 .intro__background {
