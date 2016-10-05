@@ -12,6 +12,7 @@
 .intro__wrapper {
   width: 275px;
   margin: 0 auto;
+
   @include tablet {
     width: 550px;
   }
@@ -39,6 +40,7 @@
   min-height: 215px;
   padding-top: 39px;
   padding-bottom: 20px;
+
   @include tablet {
     min-height: 205px;
     padding: 49px 0;
@@ -64,3 +66,73 @@
   margin: 0;
   font-size: 14px;
 }
+
+.intro--small {
+  @include tablet {
+    margin-top: -27px;
+  }
+}
+
+.intro--small .intro__background {
+  height: 158px;
+  background-size: initial;
+
+  @include tablet {
+    height: 290px;
+  }
+
+  @include desktop {
+    height: 300px
+  }
+}
+
+.intro--small .intro__description {
+  min-height: 203px;
+  padding-bottom: 0;
+
+  @include tablet {
+    min-height: 230px;
+    padding-top: 74px;
+  }
+
+  @include desktop {
+    min-height: 252px;
+    padding-top: 110px;
+  }
+}
+
+.intro--small .intro__wrapper {
+  @include tablet {
+    width: 445px;
+  }
+}
+
+.intro--small .intro__header {
+  padding-top: 50px;
+
+  @include tablet {
+    padding-top: 93px;
+  }
+
+  @include desktop {
+    padding-top: 100px;
+  }
+}
+
+.intro--small .intro__title {
+  margin-bottom: 25px;
+  @include tablet {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 33px;
+  }
+}
+
+.intro--small .intro__text {
+  line-height: 24px;
+}
+
+.intro--small {}
