@@ -4,27 +4,31 @@
 
   text-align: center;
   border: none;
+}
 
-  &--failure {
-    @include tablet {
-      width: 400px;
-    }
+.pop-up--failure {
+  @include tablet {
+    width: 400px;
+  }
+}
+
+.pop-up--success {
+  @include tablet {
+    width: 648px;
   }
 
-  &--success {
-    @include tablet {
-      width: 648px;
-    }
+  @include desktop {
+    width: 638px;
+  };
+}
 
-    @include desktop {
-      width: 638px;
-    };
-  }
+.pop-up .hidden {
+  display: none;
+}
 
-  &__text {
-    font-weight: normal;
-    line-height: 24px;
-    color: $black-light;
-    text-transform: uppercase;
-  }
+.pop-up__text {
+  font-weight: normal;
+  line-height: 24px;
+  color: $black-light;
+  text-transform: uppercase;
 }

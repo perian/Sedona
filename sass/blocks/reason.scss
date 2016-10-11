@@ -8,7 +8,7 @@
   text-transform: uppercase;
 
   @include tablet {
-    display: flex;
+    display: flex;s
     height: 256px;
     overflow: hidden;
   }
@@ -279,14 +279,12 @@
 
 .reason--column {
   @include tablet {
-    float: left;
     width: calc(33% + 1%/3);
   }
 }
 
 .reason--column .reason-header {
   @include tablet {
-    float: none;
     width: auto;
   }
 }
