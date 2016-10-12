@@ -89,11 +89,17 @@
           <ul class="form__list">
             <li class="form__list-item">
               <label class="form__label  form__label--grey" for="phone"><span class="hidden">Контактный</span> телефон:</label>
-              <input class="form__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+              <div class="form__container">
+                <input class="form__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+                <span class="form__phone-icon"></span>
+              </div>
             </li>
             <li class="form__list-item">
               <label class="form__label  form__label--grey" for="email">Электронная почта:</label>
-              <input class="form__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
+              <div class="form__container">
+                <input class="form__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
+                <span class="form__mail-icon"></span>
+              </div>
             </li>
           </ul>
         </div>
@@ -102,7 +108,7 @@
           <ul class="form__list">
             <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="positive" id="positive" checked>
-              <label class="form__label" for="positive">Скорее положительное</label>
+              <label class="form__label  form__label--radio" for="positive">Скорее положительное</label>
             </li>
             <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="negative" id="negative">
