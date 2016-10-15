@@ -29,13 +29,6 @@ body {
   min-width: 320px;
 
   background: $white;
-
-  @include tablet {
-    background: #4dba64;
-  }
-  @include desktop {
-    background: #6b7ec2;
-  }
 }
 
 img {
