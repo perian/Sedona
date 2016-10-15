@@ -13,9 +13,11 @@
     width: 100%;
     padding: 0;
 
-    color: $white;
-
     border: none;
+  }
+
+  @include desktop {
+    color: $white;
   }
 }
 
@@ -23,8 +25,15 @@
   @include tablet {
     width: 324px;
   }
+
   @include desktop {
     flex-grow: 1;
+  }
+}
+
+.photo-post:first-child ~ .photo-post img {
+  @include tablet {
+    height: 267px;
   }
 }
 
@@ -43,15 +52,24 @@
   height: 280px;
 
   @include tablet {
-    height: 267px;
+    height: 400px;
   }
 }
 
-.photo-post:first-child .photo-post img {
+.photo-post:nth-child(1) img {
   background-color: #fec880;
-  @include tablet {
-    height: 400px;
-  }
+}
+
+.photo-post:nth-child(2) img {
+  background-color: #c38a76;
+}
+
+.photo-post:nth-child(3) img {
+  background-color: #394e2a;
+}
+
+.photo-post:nth-child(4) img {
+  background-color: #c57b68;
 }
 
 .photo-post__footer {
@@ -70,8 +88,8 @@
   }
 
   @include desktop {
-    margin-top: -80px;
     width: 100%;
+    margin-top: -80px;
 
     background-color: rgba(255, 255, 255, 0.3);
   }
@@ -95,15 +113,15 @@
 
   color: $black-light;
 
-  @include tablet {
+  @include desktop {
     color: $white;
   }
 }
 
 .photo-post__likes {
   display: flex;
-  width: 70px;
   justify-content: space-around;
+  width: 70px;
   margin-top: 5px;
 }
 
