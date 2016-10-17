@@ -8,9 +8,16 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav  hidden">
-        <button class="main-nav__toggle" type="button"></button>
-        <ul class="main-nav__list">
+      <!--
+      Классы которые переключают состояния меню
+      и внешний вид кнопки:
+      main-nav--closed
+      main-nav--opened
+      main-nav--nojs
+     -->
+      <nav class="main-nav">
+        <button class="main-nav__toggle  hidden" type="button">Открыть меню</button>
+        <ul class="main-nav__list main-nav--opened">
           <li class="main-nav__list-item">
             <a href="/index.html">Главная</a>
           </li>
@@ -18,23 +25,22 @@
             <a href="/photo.html">Фото и видео</a>
           </li>
           <li class="main-nav__list-item">
-            <a href="/form.html">Форма отзыва</a>
+            <a>Форма отзыва</a>
           </li>
           <li class="main-nav__list-item">
-            <a href="htmlacademy.ru">HTML Academy</a>
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+          <li class="page-header__logo">
+            <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Sedona logo">
           </li>
         </ul>
       </nav>
-      <div class="page-header__logo">
-        <img src="http://placehold.it/102x83" width="102" height="83" alt="Sedona logo">
-      </div>
-      <div class="page-top-menu"></div>
     </header>
-    <section class="intro">
+    <section class="intro  intro--small">
       <div class="intro__background">
         <div class="intro__wrapper">
           <h1 class="intro__header">
-            <img src="http://placehold.it/458x78" width="458" height="78" alt="Welcome ot the gorgeous Sedona">
+            <img src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona">
           </h1>
         </div>
       </div>
@@ -45,8 +51,8 @@
           </h2>
           <p class="intro__text">
             Помогите нашим отелям стать лучше!
-            Оставьте отзыв о них, а также о посещенных вами
-            достопримечательностях
+            Оставьте отзыв о них, а также о
+            посещенных вами достопримечательностях
           </p>
         </div>
       </div>
@@ -54,18 +60,26 @@
     <main class="main">
       <form class="form" action="#" method="post">
         <div class="form__user">
-          <h3 class="form__title">Представьтесь<span class="hidden">, пожалуйста</span>:</h3>
+          <h3 class="form__title">
+            Представьтесь<span class="hidden">, пожалуйста</span>:
+          </h3>
           <ul class="form__list">
             <li class="form__list-item">
-              <label class="form__label  form__label--grey" for="name">Имя</label>
+              <label class="form__label  form__label--grey" for="name">
+                Имя:
+              </label>
               <input class="form__input" type="text" id="name" name="Name" placeholder="Петр" required>
             </li>
             <li class="form__list-item">
-              <label class="form__label  form__label--grey" for="surname">Фамилия</label>
+              <label class="form__label  form__label--grey" for="surname">
+                Фамилия:
+              </label>
               <input class="form__input" type="text" id="surname" name="Surname" placeholder="Иванов" required>
             </li>
             <li class="form__list-item">
-              <label class="form__label  form__label--grey" for="patronymic">Отчество</label>
+              <label class="form__label  form__label--grey" for="patronymic">
+                Отчество:
+              </label>
               <input class="form__input" type="text" id="patronymic" name="Patronymic" placeholder="Александрович" required>
             </li>
           </ul>
@@ -75,11 +89,17 @@
           <ul class="form__list">
             <li class="form__list-item">
               <label class="form__label  form__label--grey" for="phone"><span class="hidden">Контактный</span> телефон:</label>
-              <input class="form__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+              <div class="form__container">
+                <input class="form__input" type="tel" id="phone" name="Phone" placeholder="Введите телефон" pattern="">
+                <span class="form__phone-icon"></span>
+              </div>
             </li>
             <li class="form__list-item">
               <label class="form__label  form__label--grey" for="email">Электронная почта:</label>
-              <input class="form__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
+              <div class="form__container">
+                <input class="form__input" type="email" id="email" name="Email" placeholder="Введите e-mail">
+                <span class="form__mail-icon"></span>
+              </div>
             </li>
           </ul>
         </div>
@@ -88,7 +108,7 @@
           <ul class="form__list">
             <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="positive" id="positive" checked>
-              <label class="form__label" for="positive">Скорее положительное</label>
+              <label class="form__label  form__label--radio" for="positive">Скорее положительное</label>
             </li>
             <li class="form__list-item">
               <input class="form__input  form__input--radio" type="radio" name="impression" value="negative" id="negative">
@@ -128,7 +148,7 @@
           <p class="hidden">* — обязательные поля</p>
         </div>
         <div class="pop-up  hidden  pop-up--failure">
-          <div class="wrapper">
+          <div class="pop-up__wrapper">
             <h3 class="form__title">Что-то пошло не так!</h3>
             <p class="pop-up__text">
               Проверьте поля, выделенные красным,
@@ -151,7 +171,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <a class="page-footer__site-link" href="#">#Visitsedona</a>
+        <a class="page-footer__site-link" href="#">
+          #Visitsedona
+        </a>
         <div class="page-footer__social">
           <div class="social">
             <a class="social-link  social-link--twitter" href="#"></a>
@@ -159,9 +181,8 @@
             <a class="social-link  social-link--youtube" href="#"></a>
           </div>
         </div>
-        <a class="page-footer__made-by" href="htmlacademy.ru">
-          <p class="page-footer__text">Разработано</p>
-          <span class="page-footer__htmlacademy-icon"></span>
+        <a class="page-footer__copyright" href="htmlacademy.ru">
+          Разработано
         </a>
       </div>
     </footer>
