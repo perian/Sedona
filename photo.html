@@ -60,7 +60,11 @@
       <section class="photo-and-video">
         <article class="photo-post">
           <div class="photo-post__wrapper">
-            <img class="photo-post__img" src="img/photo-1-mobile@1x.jpg" alt="Неродные просторы">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img class="photo-post__img" src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы">
+            </picture>
             <footer class="photo-post__footer">
               <h3 class="photo-post__title">Неродные просторы</h3>
               <p class="photo-post__author">Автор фото: Борис</p>
@@ -73,7 +77,11 @@
         </article>
         <article class="photo-post">
           <div class="photo-post__wrapper">
-            <img class="photo-post__img" src="img/photo-2-mobile@1x.jpg" alt="Местная растительность">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img class="photo-post__img" src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Местная растительность">
+            </picture>
             <footer class="photo-post__footer">
               <h3 class="photo-post__title">Местная растительность</h3>
               <p class="photo-post__author">Автор фото: Сергей</p>
@@ -86,7 +94,11 @@
         </article>
         <article class="photo-post">
           <div class="photo-post__wrapper">
-            <img class="photo-post__img" src="img/photo-3-mobile@1x.jpg" alt="Дорога на север">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img class="photo-post__img" src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Дорога на север">
+            </picture>
             <footer class="photo-post__footer">
               <h3 class="photo-post__title">Дорога на север</h3>
               <p class="photo-post__author">Автор фото: Петр</p>
@@ -99,7 +111,11 @@
         </article>
         <article class="photo-post">
           <div class="photo-post__wrapper">
-            <img class="photo-post__img" src="img/photo-4-mobile@1x.jpg" alt="Мост дьявола">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
+              <img class="photo-post__img" src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" alt="Мост дьявола">
+            </picture>
             <footer class="photo-post__footer">
               <h3 class="photo-post__title">Мост дьявола</h3>
               <p class="photo-post__author">Автор фото: Антон</p>
@@ -121,7 +137,33 @@
             </p>
           </div>
         </div>
-        <video class="video-post__movie" preload="none" poster="img/video-mobile@1x.jpg" controls></video>
+        <div class="video__player">
+          <!-- <video class="video-post__movie" preload="none" poster="img/video-mobile@1x.jpg" controls></video> -->
+          <div class="promo-video__video-wrap">
+            <picture class="promo-video__preview-img-wrap">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Video prewiev">
+            </picture>
+            <div class="video-controls">
+              <form class="video-controls__wrap">
+                <input class="video-controls__rewind" type="range">
+                <button class="video-controls__replay-btn">
+                  <svg width="16" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-replay"></use></svg>
+                  replay
+                </button>
+                <button class="video-controls__cc-btn">
+                  <svg width="32" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-subtitles"></use></svg>
+                  cc
+                </button>
+                <button class="video-controls__fullscreen-btn">
+                  <svg width="20" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-fullscreen"></use></svg>
+                  fullscreen
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </article>
     </main>
     <footer class="page-footer">

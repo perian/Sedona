@@ -29,6 +29,12 @@
   }
 }
 
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
 @mixin clearfix() {
   &::after {
     content: "";

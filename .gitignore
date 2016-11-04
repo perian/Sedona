@@ -5,6 +5,7 @@
 *.pdf
 *.psd
 *.sublime*
+*.log
 css/*.css
 node_modules/
 _design/
