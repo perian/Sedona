@@ -31,12 +31,7 @@
 .form__impression,
 .form__places,
 .form__emotions {
-  // padding: 18px 0;
   border-top: 1px solid $grey-dark;
-
-  @include tablet {
-    // padding: 22px 0;
-  }
 }
 
 .form__title {
@@ -56,6 +51,7 @@
   @include tablet {
     display: none;
   }
+
   @include desktop {
     display: inline;
   }
@@ -84,8 +80,9 @@
 
   font-size: 18px;
 
-  background-color: $grey-bg;
+  background-color: $bg-grey;
   border: none;
+  outline: none;
 
   @include tablet {
     flex-grow: 1;
@@ -103,6 +100,10 @@
   }
 }
 
+.form__input:hover {
+  background-color: $bg-grey-hover;
+}
+
 .form__textarea {
   width: 100%;
   margin-bottom: 40px;
@@ -117,11 +118,10 @@
   resize: none;
 
   @include tablet {
+    height: 160px;
+    margin-bottom: 55px;
     padding: 27px;
     padding-top: 15px;
-    margin-bottom: 55px;
-
-    height: 160px;
   }
 
   @include desktop {
@@ -336,14 +336,25 @@
   width: 22px;
   height: 22px;
 
-  background: $grey-bg;
-  border: 18px solid $grey-bg;
+  background: $bg-grey;
+  border: 18px solid $bg-grey;
   border-radius: 50%;
 }
+
+// .form__impression .form__label:hover::before {
+//   background-color: $bg-grey-hover;
+//   border-color: $bg-grey-hover;
+// }
+//
+// .form__impression .form__label:hover:active::before {
+//   background-color: $black;
+//   border-color: $bg-grey-hover;
+// }
 
 input[type="radio"]:checked ~ label::before {
   background-color: black;
 }
+
 
 .form__places {
   min-height: 410px;
@@ -396,9 +407,6 @@ input[type="radio"]:checked ~ label::before {
     width: 220px;
     margin-bottom: 0;
   }
-
-  @include desktop {
-  }
 }
 
 .form__places .form__list-item:last-child {
@@ -442,7 +450,7 @@ input[type="radio"]:checked ~ label::before {
   width: 58px;
   height: 58px;
 
-  background: $grey-bg;
+  background: $bg-grey;
   border-radius: 5px;
 }
 
@@ -475,10 +483,10 @@ input[type="checkbox"]:checked ~ label::after {
 
   @include tablet {
     display: flex;
-    align-content: flex-start;
     flex-basis: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-content: flex-start;
     margin-bottom: 66px;
   }
 
@@ -495,13 +503,14 @@ input[type="checkbox"]:checked ~ label::after {
     align-self: center;
     margin: 0;
 
-    text-transform: uppercase;
     color: $black-light;
+    text-transform: uppercase;
   }
 }
 
 .form__emotions .form__title {
   margin-bottom: 15px;
+
   @include tablet {
     margin-top: -13px;
     margin-bottom: 58px;
@@ -519,8 +528,9 @@ input[type="checkbox"]:checked ~ label::after {
 .form__emotions .form__title {
   @include tablet {
     width: 62%;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+
     background: white;
   }
 

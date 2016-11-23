@@ -17,6 +17,7 @@
   }
 
   @include desktop {
+    position: relative;
     color: $white;
   }
 }
@@ -84,20 +85,27 @@
     height: 80px;
     padding: 16px 20px;
 
-    background-color: $grey-bg;
+    background-color: $bg-grey;
   }
 
   @include desktop {
-    width: 100%;
-    margin-top: -80px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
-    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
 .photo-post:nth-child(2n+1) .photo-post__footer {
   @include tablet {
     background-color: #eaeaea;
+  }
+
+  @include desktop {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -130,6 +138,16 @@
   height: 24px;
   padding: 0;
 
-  background: url(../img/icon-like.svg) no-repeat center;
+  background-color: transparent;
   border: none;
+
+  fill: $grey-light;
+
+  @include tablet {
+    fill: #a9a9a9;
+  }
+
+  @include desktop {
+    fill: #ffffff;
+  }
 }

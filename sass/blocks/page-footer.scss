@@ -34,6 +34,7 @@
 
   @include tablet {
     margin-bottom: 0;
+
     text-align: left;
   }
 }
@@ -48,22 +49,24 @@
 
 .page-footer__copyright {
   position: relative;
-  padding-right: 40px;
 
   font-size: 14px;
   text-align: right;
-  text-decoration: none;
   color: $black;
+  text-decoration: none;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    right: 0;
+.page-footer__copyright-svg {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
 
-    width: 27px;
-    height: 34px;
+  vertical-align: middle;
+  &:hover {
+    fill: $blue;
+  }
 
-    background-image: url("../img/logo-htmlacademy.svg");
+  &:active {
+    fill: $grey-light;
   }
 }

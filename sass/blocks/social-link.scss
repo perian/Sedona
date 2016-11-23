@@ -1,12 +1,32 @@
 .social-link {
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
   width: 46px;
   height: 48px;
-  background-color: $blue;
   margin-right: 6px;
+
+  background-color: $blue;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  fill: white;
 }
 
 .social-link:last-child {
   margin-right: 0;
+}
+
+.social-link:hover {
+  background-color: $bg-blue-hover;
+}
+
+.social-link:active {
+  background-color: $bg-blue-active;
+}
+
+.social-link svg {
+  margin: auto;
+}
+
+.social-link:active use {
+  fill: #88b6d1;
 }

@@ -24,9 +24,9 @@
 }
 
 .reason__header {
+  min-height: 215px;
   padding-top: 30px;
   padding-bottom: 40px;
-  min-height: 215px;
 
   text-align: center;
   color: $white;
@@ -36,6 +36,15 @@
   @include tablet {
     height: 256px;
     padding-top: 45px;
+  }
+}
+
+.reason__header--mask {
+  @include mobile-width-only {
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 37px;
   }
 }
 
@@ -60,13 +69,14 @@
   font-size: 18px;
   line-height: 26px;
 
-  @include desktop {
-    margin-bottom: 16px;
-  };
   @include tablet {
     width: 160px;
 
     font-size: 21px;
+  }
+
+  @include desktop {
+    margin-bottom: 16px;
   }
 }
 
@@ -107,11 +117,11 @@
   position: relative;
 
   height: 260px;
+  overflow: hidden;
 
   @include tablet {
     width: 67%;
     height: 256px;
-    overflow: hidden;
   }
 }
 
@@ -123,12 +133,7 @@
   left: 0;
 
   width: 100%;
-  height: 260px;
   margin: auto;
-
-  @include tablet {
-    height: 256px;
-  }
 }
 
 .reason:nth-child(1),
@@ -204,10 +209,10 @@
 }
 
 .reason__list {
+  min-height: 415px;
   margin: 0;
   padding-top: 31px;
   padding-bottom: 19px;
-  min-height: 415px;
 
   @include tablet {
     display: flex;
@@ -245,9 +250,11 @@
     left: 0;
 
     width: 40px;
-    height: 40px;
+    height: 48px;
 
-    background: $blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
     @include tablet {
       top: 32px;
@@ -257,6 +264,18 @@
       height: 80px;
     }
   }
+}
+
+.reason__list-item--house .reason__wrapper::before {
+  background-image: url("../img/icon-house.svg");
+}
+
+.reason__list-item--gift .reason__wrapper::before {
+  background-image: url("../img/icon-gift.svg");
+}
+
+.reason__list-item--food .reason__wrapper::before {
+  background-image: url("../img/icon-burger.svg");
 }
 
 .reason:nth-child(3) .reason__header {
@@ -274,17 +293,5 @@
     width: 151px;
     margin-right: auto;
     margin-left: auto;
-  }
-}
-
-.reason--column {
-  @include tablet {
-    width: calc(33% + 1%/3);
-  }
-}
-
-.reason--column .reason-header {
-  @include tablet {
-    width: auto;
   }
 }
