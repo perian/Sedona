@@ -51,3 +51,16 @@
     margin-bottom: 46px;
   }
 }
+
+.search-hotel__btn:hover {
+  background-color: $btn-hover;
+}
+
+.search-hotel__btn:active {
+  background-color: $btn-down;
+  color: $white-transparent;
+}
+
+.search-hotel__btn:disabled {
+  background-color: $btn-disabled;
+}

@@ -9,10 +9,11 @@
   color: #ffffff;
   text-transform: uppercase;
 
-  background-color: #81b3d2;
+  background-color: $btn;
   border: none;
+  outline: none;
 
   @include tablet {
-    width: 460px
+    width: 460px;
   }
 }

@@ -104,6 +104,23 @@
   background-color: $bg-grey-hover;
 }
 
+.form__input:focus,
+.form__textarea:focus {
+  background-color: $white;
+  box-shadow: inset 0 0 0 4px $grey-dark;
+  &::-webkit-input-placeholder {
+    color: $grey-dark;
+  }
+
+  &::-moz-placeholder {
+    color: $grey-dark;
+  }
+
+  &::-ms-input-placeholder {
+    color: $grey-dark;
+  }
+}
+
 .form__textarea {
   width: 100%;
   margin-bottom: 40px;
@@ -114,6 +131,7 @@
 
   background: $grey;
   border: none;
+  outline: none;
 
   resize: none;
 
@@ -341,20 +359,27 @@
   border-radius: 50%;
 }
 
-// .form__impression .form__label:hover::before {
-//   background-color: $bg-grey-hover;
-//   border-color: $bg-grey-hover;
-// }
-//
-// .form__impression .form__label:hover:active::before {
-//   background-color: $black;
-//   border-color: $bg-grey-hover;
-// }
-
-input[type="radio"]:checked ~ label::before {
-  background-color: black;
+.form__impression .form__label:hover::before {
+  background-color: $bg-grey-hover;
+  border-color: $bg-grey-hover;
 }
 
+.form__impression .form__label:active::before {
+  background-color: $bg-grey-down;
+  border-color: $bg-grey-down;
+}
+
+input[type="radio"]:checked ~ label::before {
+  background-color: $black;
+}
+
+input[type="radio"]:checked:hover ~ label::before {
+  background-color: $black-light;
+}
+
+input[type="radio"]:checked:active ~ label::before {
+  background-color: #a4a4a4;
+}
 
 .form__places {
   min-height: 410px;
@@ -450,7 +475,7 @@ input[type="radio"]:checked ~ label::before {
   width: 58px;
   height: 58px;
 
-  background: $bg-grey;
+  background-color: $bg-grey;
   border-radius: 5px;
 }
 
@@ -474,6 +499,19 @@ input[type="checkbox"]:checked ~ label::after {
   border-top-style: none;
   border-right-style: none;
   transform: rotate(-45deg);
+}
+
+input[type="checkbox"] ~ label:hover::before,
+input[type="checkbox"]:checked ~ label:hover::after,
+input[type="checkbox"]:checked ~ label:hover::before {
+  background-color: $bg-grey-hover;
+  border-color: $black-light;
+}
+input[type="checkbox"] ~ label:active::before,
+input[type="checkbox"]:checked ~ label:active::after,
+input[type="checkbox"]:checked ~ label:active::before {
+  background-color: $bg-grey-down;
+  border-color: #a4a4a4;
 }
 
 .form__emotions {
@@ -517,10 +555,23 @@ input[type="checkbox"]:checked ~ label::after {
   }
 }
 
-.form__emotions .form__send-response {
+.form__send-response {
   @include tablet {
     width: 50%;
   }
+}
+
+.form__send-response-btn:hover {
+  background-color: $btn-hover;
+}
+
+.form__send-response-btn:active {
+  background-color: $btn-down;
+  color: $white-transparent;
+}
+
+.form__send-response-btn:disabled {
+  background-color: $btn-disabled;
 }
 
 .form__contacts .form__title,
@@ -531,7 +582,7 @@ input[type="checkbox"]:checked ~ label::after {
     margin-right: auto;
     margin-left: auto;
 
-    background: white;
+    background: $white;
   }
 
   @include desktop {

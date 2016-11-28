@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  fill: white;
+  fill: $white;
 }
 
 .social-link:last-child {
@@ -20,7 +20,7 @@
 }
 
 .social-link:active {
-  background-color: $bg-blue-active;
+  background-color: $bg-blue-down;
 }
 
 .social-link svg {

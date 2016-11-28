@@ -122,7 +122,7 @@
     height: 45px;
     width: 100%;
     align-self: flex-start;
-    background-color: r$bg-black-transparent
+    background-color: $bg-black-transparent
   }
 }
 
@@ -148,7 +148,7 @@
   height: 9px;
 
   border-radius: 50%;
-  background-color: white;
+  background-color: $white;
 
   @include tablet {
     top: 40.5px;
@@ -175,8 +175,20 @@
   fill: #5c6870;
 
   @include tablet {
-    fill: white;
+    fill: $white;
   }
+}
+
+.video-controls__replay-icon:hover,
+.video-controls__subtitles-icon:hover,
+.video-controls__fullscreen-icon:hover {
+  fill: $btn-video-hover;
+}
+
+.video-controls__replay-icon:active,
+.video-controls__subtitles-icon:active,
+.video-controls__fullscreen-icon:active {
+  fill: $btn-video-down;
 }
 
 .video-controls__replay-icon {

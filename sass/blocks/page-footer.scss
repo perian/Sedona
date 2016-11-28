@@ -39,6 +39,14 @@
   }
 }
 
+.page-footer__site-link:hover {
+  color: $blue;
+}
+
+.page-footer__site-link:active {
+  color: $black-transparent;
+}
+
 .page-footer__social {
   margin-bottom: 42px;
 

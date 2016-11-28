@@ -47,36 +47,76 @@
     background: none;
     border: none;
   }
-}
 
-.main-nav__list-item:nth-child(1) {
-  border-top: none;
-}
-
-.main-nav__list-item:nth-child(3),
-.main-nav__list-item:nth-child(4) {
-  @include tablet {
-    order: 1;
+  &:nth-child(1) {
+    border-top: none;
   }
-}
 
-.main-nav__list-item:nth-child(4) {
-  border-bottom: none;
-}
+  &:nth-child(3),
+  &:nth-child(4) {
+    @include tablet {
+      order: 1;
+    }
+  }
 
-.main-nav__list-item a {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 40px;
-  font-family: "PT Sans", "Tahoma", sans-serif;
-  color: $white;
-  text-transform: uppercase;
-  text-decoration: none;
+  &:nth-child(4) {
+    border-bottom: none;
+  }
 
-  @include tablet {
-    font-size: 14px;
-    line-height: 26px;
-    color: $black;
+  &:hover {
+    @include mobile-width-only {
+      background-color: $bg-blue-hover;
+    }
+  }
+
+  &:active {
+    @include mobile-width-only {
+      background-color: $bg-blue-down;
+    }
+  }
+
+  &:active a {
+    color: $white-transparent;
+  }
+
+  & a {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    font-family: "PT Sans", "Tahoma", sans-serif;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 26px;
+      color: $black;
+    }
+  }
+
+  & a:hover {
+    @include tablet {
+      color: $blue;
+    }
+  }
+
+  & a:active {
+    @include tablet {
+      color: $black-transparent;
+    }
+  }
+
+  &--active a {
+    color: $main-menu-active;
+  }
+
+  &--active a:hover {
+    color: $main-menu-active-hover;
+  }
+
+  &--active a:active {
+    color: $main-menu-active-down  ;
   }
 }
 
