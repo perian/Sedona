@@ -6,6 +6,7 @@
 *.psd
 *.sublime*
 *.log
+*.gitignore
 css/*.css
 node_modules/
 _design/
