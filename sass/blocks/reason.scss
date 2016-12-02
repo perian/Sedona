@@ -18,7 +18,11 @@
   width: 280px;
   margin: auto;
 
+  @include desktop {
+    width: 270px;
+  }
   @include tablet {
+    width: 162px;
     padding: 0;
   }
 }
@@ -37,28 +41,28 @@
     height: 256px;
     padding-top: 45px;
   }
-}
 
-.reason__header--mask {
-  @include mobile-width-only {
-    background-image: url("../img/bg-triangle.svg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 37px;
+  &--mask {
+    @include mobile-width-only {
+      background-image: url("../img/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: 100% 37px;
+    }
   }
-}
 
-.reason__header--dark {
-  min-height: 168px;
-  padding-bottom: 0;
+  &--dark {
+    min-height: 168px;
+    padding-bottom: 0;
 
-  color: $black-light;
+    color: $black-light;
 
-  background-color: $grey;
-}
+    background-color: $grey;
+  }
 
-.reason__header--dark .reason__wrapper {
-  padding: 0 12px 27px;
+  &--dark .reason__wrapper {
+    padding-bottom: 27px;
+  }
 }
 
 .reason__title {
@@ -69,14 +73,13 @@
   font-size: 18px;
   line-height: 26px;
 
+  @include desktop {
+    margin-bottom: 16px;
+  }
   @include tablet {
     width: 160px;
 
     font-size: 21px;
-  }
-
-  @include desktop {
-    margin-bottom: 16px;
   }
 }
 
@@ -228,12 +231,24 @@
     flex: 1;
     width: 33%;
   }
+
+  &:nth-child(2) {
+    @include tablet {
+      order: 1;
+    }
+  }
 }
 
-.reason__list-item:nth-child(2) {
-  @include tablet {
-    order: 1;
-  }
+.reason__list-item--house .reason__wrapper::before {
+  background-image: url("../img/icon-house.svg");
+}
+
+.reason__list-item--gift .reason__wrapper::before {
+  background-image: url("../img/icon-gift.svg");
+}
+
+.reason__list-item--food .reason__wrapper::before {
+  background-image: url("../img/icon-burger.svg");
 }
 
 .reason__list-item .reason__wrapper {
@@ -264,18 +279,6 @@
       height: 80px;
     }
   }
-}
-
-.reason__list-item--house .reason__wrapper::before {
-  background-image: url("../img/icon-house.svg");
-}
-
-.reason__list-item--gift .reason__wrapper::before {
-  background-image: url("../img/icon-gift.svg");
-}
-
-.reason__list-item--food .reason__wrapper::before {
-  background-image: url("../img/icon-burger.svg");
 }
 
 .reason:nth-child(3) .reason__header {

@@ -34,6 +34,13 @@
   border-top: 1px solid $grey-dark;
 }
 
+.form__user,
+.form__impression {
+  @include tablet {
+    border-top: none;
+  }
+}
+
 .form__title {
   width: 100%;
   margin: 20px 0;

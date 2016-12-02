@@ -80,6 +80,7 @@
   }
 
   & a {
+    display: block;
     font-weight: bold;
     font-size: 18px;
     line-height: 40px;
@@ -108,23 +109,29 @@
   }
 
   &--active a {
-    color: $main-menu-active;
+    @include tablet {
+      color: $main-menu-active;
+    }
   }
 
   &--active a:hover {
-    color: $main-menu-active-hover;
+    @include tablet {
+      color: $main-menu-active-hover;
+    }
   }
 
   &--active a:active {
-    color: $main-menu-active-down  ;
+    @include tablet {
+      color: $main-menu-active-down;
+    }
   }
 }
 
 @include mobile-width-only {
   .main-nav__toggle {
     position: absolute;
-    top: 16px;
-    right: 20px;
+    top: 230px;
+    right: 10px;
 
     width: 22px;
     height: 22px;
@@ -140,10 +147,10 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 9px;
+      right: 10px;
 
-      width: 100%;
+      width: 22px;
       height: 4px;
 
       background-color: $blue;
@@ -152,26 +159,32 @@
     }
   }
 
-  .main-nav--nojs .main-nav__toggle {
+  .main-nav--nojs.main-nav__toggle {
     display: none;
   }
 
-  .main-nav--opened .main-nav__toggle {
+  .main-nav__toggle--close {
+    top: 7px;
+    right: 10px;
+
     &::after,
     &::before {
       content: "";
       position: absolute;
-      top: 10px;
-      left: 0;
+      top: 17px;
+      right: 10px;
 
-      width: 100%;
+      width: 22px;
       height: 4px;
+
+      font-size: 0;
 
       background-color: $white;
       transform: rotate(45deg);
     }
 
     &::before {
+      box-shadow: none;
       transform: rotate(-45deg);
     }
   }
