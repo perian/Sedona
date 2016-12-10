@@ -1,7 +1,7 @@
 .video-post {
   width: 320px;
   margin: 0 auto;
-  margin-bottom: 103px;
+  margin-bottom: 102px;
   padding-top: 18px;
 
   font-size: 14px;
@@ -13,24 +13,25 @@
   border-top: 1px solid $grey-dark;
 
   @include tablet {
-    margin-bottom: 82px;
-    padding-top: 42px;
     width: 648px;
+    margin-bottom: 38px;
+    padding-top: 42px;
+
     border: none;
   }
-
   @include desktop {
-    padding-top: 46px;
     width: 800px;
+    margin-bottom: 83px;
   }
 }
 
 .video-post__wrapper {
   width: 280px;
   margin: 0 auto;
+
   @include tablet {
     width: 648px;
-  };
+  }
 }
 
 .video-post video {
@@ -44,6 +45,11 @@
 
 .video-post__header {
   text-align: center;
+
+  @include tablet {
+    width: 415px;
+    margin: 0 auto;
+  }
 }
 
 .video-post__title {
@@ -51,25 +57,30 @@
   font-size: 18px;
   line-height: 26px;
   color: $black;
+
   @include tablet {
-    font-size: 30px
+    font-size: 30px;
   }
 }
 
 .video-post__text {
   margin-top: 26px;
   margin-bottom: 35px;
-  @include tablet {
-    margin: 29px 0;
-  }
 
+  word-spacing: 1px;
+
+  @include tablet {
+    margin-top: 29px;
+    margin-bottom: 75px;
+
+    word-spacing: normal;
+  }
   @include desktop {
     margin-top: 30px;
-    margin-bottom: 72px;
   }
 }
 
-.promo-video__video-wrap {
+.video-post__video-wrap {
   position: relative;
 }
 
@@ -81,61 +92,78 @@
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   height: 111px;
 
   font-size: 0;
   line-height: 0;
 
   @include mobile-width-only {
+    justify-content: space-between;
     width: 280px;
     margin: auto;
-  }
+    padding: 0 25px;
 
+    box-shadow: inset 0 -66px $bg-grey,
+    inset 0 45px $bg-black-transparent;
+  }
   @include tablet {
-    height: 93px;
     bottom: 7px;
+
+    height: 93px;
+
     background-color: $bg-black-transparent;
   }
 }
 
 .video-controls__wrap button {
-  width: 50px;
+  height: 22px;
+  padding: 0;
 
+  background-color: transparent;
   border: none;
   outline: none;
-  background-color: transparent;
 
   @include mobile-width-only {
     align-self: flex-start;
-    height: 66px;
-    background: $bg-grey;
+  }
+  @include tablet {
+    margin: 0 auto;
   }
 }
 
 .video-controls__rewind {
-  flex-grow: 1;
-  padding: 0 15px;
+  width: 386px;
+  height: 22px;
 
   outline: none;
 
   @include mobile-width-only {
-    height: 45px;
-    width: 100%;
     align-self: flex-start;
-    background-color: $bg-black-transparent
+    width: 230px;
+    height: 45px;
+  }
+  @include tablet {
+    margin: 0 auto;
+  }
+  @include desktop {
+    width: 586px;
   }
 }
 
 .video-controls__progress-bar {
   position: relative;
   top: 22.5px;
-  left: 0;
   right: 0;
+  left: 0;
+
   height: 0;
+
   border-top: 3px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
 
   @include tablet {
-    top: 46.5px;
+    top: 9.5px;
   }
 }
 
@@ -147,25 +175,28 @@
   width: 9px;
   height: 9px;
 
-  border-radius: 50%;
   background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
 
   @include tablet {
-    top: 40.5px;
+    top: 3.5px;
     left: 112px;
   }
 }
 
 .video-controls__replay-btn {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-start;
-  padding-left: 15px;
-
   @include tablet {
+    display: flex;
     flex-grow: 0;
     order: -1;
     padding-left: 25px;
+  }
+}
+
+.video-controls__subtitles-btn {
+  @include mobile-width-only {
+    margin-left: 104px;
   }
 }
 
@@ -173,7 +204,6 @@
 .video-controls__subtitles-icon,
 .video-controls__fullscreen-icon {
   fill: #5c6870;
-
   @include tablet {
     fill: $white;
   }

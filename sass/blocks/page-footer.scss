@@ -14,13 +14,12 @@
 }
 
 .page-footer__wrapper {
-  @include container;
-
   @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  @include container;
 }
 
 .page-footer__site-link {
@@ -48,7 +47,7 @@
 }
 
 .page-footer__social {
-  margin-bottom: 42px;
+  margin-bottom: 37px;
 
   @include tablet {
     margin-bottom: 0;

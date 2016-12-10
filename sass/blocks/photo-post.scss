@@ -15,9 +15,9 @@
 
     border: none;
   }
-
   @include desktop {
     position: relative;
+
     color: $white;
   }
 }
@@ -26,7 +26,6 @@
   @include tablet {
     width: 324px;
   }
-
   @include desktop {
     flex-grow: 1;
   }
@@ -87,11 +86,10 @@
 
     background-color: $bg-grey;
   }
-
   @include desktop {
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
 
     width: 100%;
 
@@ -103,7 +101,6 @@
   @include tablet {
     background-color: #eaeaea;
   }
-
   @include desktop {
     background-color: $bg-black-transparent;
   }
@@ -143,11 +140,9 @@
   outline: none;
 
   fill: $grey-light;
-
   @include tablet {
     fill: #a9a9a9;
   }
-
   @include desktop {
     fill: #ffffff;
   }

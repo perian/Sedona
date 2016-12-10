@@ -15,7 +15,6 @@
     width: 648px;
     padding: 0;
   }
-
   @include desktop {
     width: 960px;
   }
@@ -58,7 +57,6 @@
   @include tablet {
     display: none;
   }
-
   @include desktop {
     display: inline;
   }
@@ -81,6 +79,7 @@
 .form__input {
   flex: 1;
   width: 100%;
+  min-width: 1px;
   height: 58px;
   padding: 20px;
   padding-left: 24px;
@@ -148,7 +147,6 @@
     padding: 27px;
     padding-top: 15px;
   }
-
   @include desktop {
     padding: 20px;
     padding-top: 12px;
@@ -171,11 +169,10 @@
   min-height: 305px;
 
   @include tablet {
-    flex-basis: 50%;
+    width: 50%;
     min-height: 402px;
     padding-left: 62px;
   }
-
   @include desktop {
     padding-left: 79px;
   }
@@ -187,7 +184,6 @@
 
     text-align: start;
   }
-
   @include desktop {
     margin-bottom: 60px;
   }
@@ -213,10 +209,9 @@
   min-height: 317px;
 
   @include tablet {
-    flex-basis: 100%;
+    width: 100%;
     min-height: 321px;
   }
-
   @include desktop {
     min-height: 223px;
   }
@@ -227,7 +222,6 @@
     margin-top: -13px;
     margin-bottom: 24px;
   }
-
   @include desktop {
     margin-bottom: 73px;
   }
@@ -245,7 +239,6 @@
   @include tablet {
     margin-bottom: 25px;
   }
-
   @include desktop {
     display: flex;
     align-items: center;
@@ -309,8 +302,8 @@
   min-height: 288px;
 
   @include tablet {
-    flex-basis: 50%;
     order: -2;
+    width: 50%;
     padding-right: 50px;
   }
 }
@@ -392,10 +385,9 @@ input[type="radio"]:checked:active ~ label::before {
   min-height: 410px;
 
   @include tablet {
-    flex-basis: 100%;
+    width: 100%;
     min-height: 293px;
   }
-
   @include desktop {
     min-height: 203px;
   }
@@ -421,7 +413,6 @@ input[type="radio"]:checked:active ~ label::before {
     align-content: space-between;
     min-height: 146px;
   }
-
   @include desktop {
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -528,13 +519,12 @@ input[type="checkbox"]:checked ~ label:active::before {
 
   @include tablet {
     display: flex;
-    flex-basis: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
+    width: 100%;
     margin-bottom: 66px;
   }
-
   @include desktop {
     margin-bottom: 70px;
   }
@@ -573,8 +563,9 @@ input[type="checkbox"]:checked ~ label:active::before {
 }
 
 .form__send-response-btn:active {
-  background-color: $btn-down;
   color: $white-transparent;
+
+  background-color: $btn-down;
 }
 
 .form__send-response-btn:disabled {
@@ -591,7 +582,6 @@ input[type="checkbox"]:checked ~ label:active::before {
 
     background: $white;
   }
-
   @include desktop {
     width: 40%;
   }
