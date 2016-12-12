@@ -102,6 +102,9 @@
   @include tablet {
     width: 156px;
   }
+  @include desktop {
+    width: 100%;
+  }
 }
 
 .reason__text .hidden {
