@@ -5,7 +5,24 @@
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/fontfaceobserver.js" async></script>
     <script>
+      var font = new FontFaceObserver("PT Sans");
+      var html = document.documentElement;
+
+      html.classList.add("fonts-loading");
+
+      font.load().then(function () {
+        sessionStorage.fontsLoaded = true;
+      }).catch(function () {
+          sessionStorage.fontsLoaded = false;
+      });
+
+      if (sessionStorage.fontsLoaded) {
+        var html = document.documentElement;
+
+        html.classList.add("fonts-loaded");
+      };
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
@@ -20,7 +37,7 @@
       main-nav--closed
       main-nav--opened
       main-nav--nojs
-     -->
+      -->
       <nav class="main-nav">
         <button class="main-nav__toggle  main-nav__toggle--close" type="button">Открыть меню</button>
         <ul class="main-nav__list  main-nav--opened">
@@ -234,22 +251,19 @@
       </div>
     </footer>
     <script>
-      var navList = document.querySelector('.main-nav__list');
-      var navToggle = document.querySelector('.main-nav__toggle');
-      // navList.classList.remove('main-nav--nojs');
-      // navList.classList.remove('main-nav--opened');
-      // navList.classList.add('main-nav--closed');
-      // navToggle.classList.remove('main-nav__toggle--close');
-      navToggle.addEventListener('click', function() {
-        if (navList.classList.contains('main-nav--opened')) {
-          navList.classList.remove('main-nav--opened');
-          navList.classList.add('main-nav--closed');
-          navToggle.classList.remove('main-nav__toggle--close');
+      var navList = document.querySelector(".main-nav__list");
+      var navToggle = document.querySelector(".main-nav__toggle");
+
+      navToggle.addEventListener("click", function() {
+        if (navList.classList.contains("main-nav--opened")) {
+          navList.classList.remove("main-nav--opened");
+          navList.classList.add("main-nav--closed");
+          navToggle.classList.remove("main-nav__toggle--close");
         }
         else {
-          navList.classList.add('main-nav--opened');
-          navList.classList.remove('main-nav--closed');
-          navToggle.classList.add('main-nav__toggle--close');
+          navList.classList.add("main-nav--opened");
+          navList.classList.remove("main-nav--closed");
+          navToggle.classList.add("main-nav__toggle--close");
        }
       });
     </script>

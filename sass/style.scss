@@ -26,6 +26,7 @@
 }
 
 body {
+  font-family: "Tahoma", sans-serif;
   min-width: 320px;
   margin: 0 auto;
 
@@ -35,6 +36,10 @@ body {
     max-width: 1200px;
     box-shadow: 0 0 35px -10px;
   }
+}
+
+.fonts-loaded body {
+  font-family: bold "PT Sans", "Tahoma", sans-serif;
 }
 
 img {
